@@ -1,0 +1,275 @@
+/*#############DEFAULTS###############*/
+body{
+	margin: 0;
+	line-height: 1;
+}
+
+body::-webkit-scrollbar{
+	display: none;
+}
+
+.bodyclass{
+	margin: 0;
+	background-image: url(travel.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+}
+
+.row{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.row::after{
+	display: table;
+	clear: both;
+	content: "";
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+footer.footer{
+	margin: 0;
+	background-color: #666;
+	padding-left: 10%;
+}
+
+footer.footer h1{
+	color: #fff;
+	font-size: 35px;
+}
+
+footer.footer ul{
+	list-style: none;
+	text-align: left;
+	padding-left: 0;
+}
+
+footer.footer ul li{
+	color: #fff;
+	font-size: 22px;
+	line-height: 1.5;
+}
+
+ul.places{
+	list-style: none;
+	text-align: left;
+	padding-left: 0;
+}
+
+ul.places li{
+	color: #fff;
+	font-size: 20px;
+	line-height: 1.2;
+}
+
+/*#############NAV BAR################*/
+nav{
+	margin: 0;
+	display: block;
+}
+
+ul{
+	list-style-type: none;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0px;
+	display: block;
+	overflow: hidden;
+}
+
+.topnav li{
+	display: inline-block;
+}
+
+li.logo{
+	float: left;
+	color: red;
+	font-family: Quintessential;
+	font-size: 38px;
+	margin-top: 0;
+	margin-bottom: 10px;
+/*	font-family: 'Creepster', cursive;*/
+/*	font-family: Josefin+Sans;*/
+}
+
+li.navright{
+	float: right;
+}
+
+li a{
+	display: block;
+	padding: 25px;
+	background-color: ;
+	text-decoration: none;
+	font-size: larger;
+}
+
+a{
+	text-decoration: none;
+}
+
+ul li a:hover{
+	background-color: #0080ff;
+	color: #fff;
+}
+
+ul li.dropdown{
+	display: none;
+}
+
+/*##############CUSTOM STYLES###############*/
+.title{
+	color: #fff;
+	font-size: 70px;
+	margin-left: 3%;
+}
+
+.art{
+	color: #fff;
+	margin-top: 0;
+	margin-left: 3%;
+	font-size: 25px;
+	font-family: Nunito;
+}
+
+div.fb-login-button{
+	padding: 15px;
+	width: 150px;
+	height: auto;
+	display: block;
+	margin: ;
+	background: ;
+
+}
+
+.lastsec{
+	background: linear-gradient(blue, pink);
+	width: auto;
+	height: auto;
+	padding-left: 2%;
+	line-height: 1;
+	margin: auto;
+}
+
+.lastsec.row{
+
+}
+
+.lastsec h2{
+	color: #fff;
+	font-size: 25px;
+	font-family: Quintessential;
+}
+
+section.auth{
+	display: block;
+	margin: auto;
+	width: 38%;
+	height: 500px;
+	border-style: border-box;
+	border: 2px solid black;
+	background-color: cadetblue;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+section.auth p{
+	padding: 5px;
+	color: #fff;
+	font-size: 20px;
+}
+
+.searchinput{
+	width: 80%;
+	line-height: 1.5;
+	padding: 10px;
+	height: ;
+}
+
+img.hotel{
+	padding: 2px;
+
+	max-width: 95%;
+	height: 300px;
+}
+
+
+/*###########MOBILE###############*/
+@media screen and (max-width: 680px){
+	body{
+	margin: 0;
+	background-image: url(travel.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: auto;
+}
+
+	ul.topnav li:not(:nth-child(1)){
+		display: none;
+	}
+
+	ul.topnav li.dropdown{
+		display: block;
+		float: right;
+	}
+
+	ul.topnav.responsive li.dropdown{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	ul.topnav.responsive{
+		position: relative;
+	}
+
+	ul.topnav.responsive li{
+		display: inline;
+		float: none;
+	}
+
+	ul.topnav.responsive li a{
+		display: block;
+		text-align: left;
+	}
+
+	.lastsec{
+		padding-left: 2%;
+	}
+
+	.col-4,
+	.col-8,
+	.col-6,
+	.col-3{
+		width: 100%;
+	}
+
+	.bodyclass{
+	margin: 0;
+	background-image: url(travel.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: auto;
+}
+
+.map{
+	width: 100%;
+
+ }
+}

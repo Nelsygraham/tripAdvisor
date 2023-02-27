@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trip-Advisor</title>
+
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@340;481&family=Nunito:wght@200&family=Quintessential&family=Roboto+Mono:wght@300&family=Rowdies:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="tripAdvisor.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAio4zUHbyChfHLT3EuBE9lqHWUFOIJrnY&libraries=places"></script>
+
+	
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '731315465264145',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v16.0'
+    });
+      
+    FB.AppEvents.logPageView();  
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+</head>
+<body>
+	<div onload="alert('Do you want to login to NG TripAdvisor with Facebook?')" class="fb-login-button" data-max-rows="1" data-width="120" data-size="large" data-button-type="continue_with" data-layout="" data-auto-logout-link="true" data-use-continue-as="true"></div>
+<section class="bodyclass">
+
+<script>
+
+function checkLoginState() {
+	FB.getLoginStatus(function(response){
+		statusChangeCallback(response);
+	});
+	}
+  
+</script>
+
+ <header>
+ 	<nav>
+ 		<ul class="topnav" id="dropdownClick">
+ 			<li class="logo"><h1>NG TripAdvisor</h1></li>
+ 			<li><a href="#home">Home</a></li>
+ 			<li><a href="#about">About</a></li>
+ 			<li><a href="#places">Places</a></li>
+ 			<li><a href="#hotels">Hotels</a></li>
+ 			<li><a href="#blog">Blog</a></li>
+ 			<li><a href="#contact">Contact Us</a></li>
+ 			<li class="dropdown"><a href="javascript:void(0)" onclick="dropdownMenu()">&#9776;</a></li>
+ 			<li class="navright"><a href="#signup">Sign Up</a></li>
+ 			<li class="navright"><a href="#login">Login</a></li>
+ 		</ul>
+ 	</nav>
+ </header>
+
+ <!-- ////////////////////////////////////////////// -->
+
+ <div class="row">
+
+ 	<div class="col-8">
+ 	  <h1 class="title">Discover <br> A new Place</h1>
+ 	  <h3 class="art">Find great places to stay, eat, shop or visit from local experts</h3>
+  </div>
+
+  <div class="col-4">
+  	<h1 class="title">Travel <br> The World</h1>
+ 	  <h3 class="art">Visit or live in your dream world <br> Search for your favourite destinations below........................👇👇</h3>
+  </div>
+
+ </div>
+
+</section>
+
+<section class="lastsec">
+ <div class="row">
+
+ 	<div class="col-3 ">
+ 		<h2>Favourite Destinations</h2>
+ 		<div> <img src="hotel1.jpg" class="hotel"> </div>
+    <label>Maldives Island</label>
+
+ 	</div>
+
+ 	<div class="col-3 ">
+ 		<h2>Classy Hotels</h2>
+ 		<div> <img src="hotel.jpg" class="hotel"> </div>
+    <label>Maldives Hotel</label>
+
+ 	</div>
+
+  <div class="col-3 ">
+    <h2>Sweet Isn't it?</h2>
+    <div> <img src="hotel2.jpg" class="hotel"> </div>
+    <label>Vacations</label>
+
+  </div>
+
+  <div class="col-3 ">
+    <h2>MAP -Find your desirable location</h2>
+
+    <div>
+      <input id="searchInput" class="searchinput" type="text" data-size="large" data-width="250px" placeholder="Search for a location😍">
+    </div>
+
+    <label>NG MAPS</label>
+  </div>
+
+</div>
+</section>
+
+<script type="text/javascript">
+	function dropdownMenu(){
+		var x = document.getElementById("dropdownClick");
+		if(x.className === "topnav"){
+			x.className += " responsive";
+			// change topnav to topnav.responsive
+		}else{
+			x.className = "topnav";
+		}
+	}
+</script>
+
+ <footer class="footer">
+ 	<div class="row">
+ 		<div class="col-4">
+ 			<h1>Products</h1>
+ 		   <ul>
+ 		   	<li>Sales</li>
+ 		   	<li>Purchasing</li>
+ 		   	<li>Operations</li>
+ 		   </ul>
+  		</div>
+ 		<div class="col-4">
+ 			<h1>Company</h1>
+ 			<ul>
+ 		   	<li>About</li>
+ 		   	<li>Blogs</li>
+ 		   	<li>Careers</li>
+ 		   </ul>
+ 		</div>
+ 		<div class="col-4">
+ 			<h1>Connect</h1>
+ 			<ul>
+ 		   	<li>Facebook</li>
+ 		   	<li>Twitter</li>
+ 		   	<li>Instagram</li>
+ 		   </ul>
+ 		</div>
+ 	</div>
+ </footer>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAio4zUHbyChfHLT3EuBE9lqHWUFOIJrnY&libraries=places&callback=initPlaces"></script>
+
+
+<script type="text/javascript" src="tripAdvisor.js"></script>
+</body>
+</html>
